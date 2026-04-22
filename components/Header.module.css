@@ -1,0 +1,93 @@
+.header {
+  background-color: #ffffff;
+  color: #24292f;
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid #e1e4e8;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(8px);
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #24292f;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navList a {
+  color: #586069;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.navList a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #007bff;
+  transition: width 0.2s ease;
+}
+
+.navList a:hover {
+  color: #007bff;
+  transform: translateZ(2px);
+}
+
+.navList a:hover::after {
+  width: 100%;
+}
+
+/* Dark theme styles */
+[data-theme="dark"] .header {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  border-bottom-color: #30363d;
+}
+
+[data-theme="dark"] .logo h1 {
+  color: #c9d1d9;
+}
+
+[data-theme="dark"] .navList a {
+  color: #8b949e;
+}
+
+[data-theme="dark"] .navList a:hover {
+  color: #58a6ff;
+}
+
+[data-theme="dark"] .navList a::after {
+  background: #58a6ff;
+}

@@ -1,0 +1,39 @@
+.footer {
+  background-color: #f6f8fa;
+  color: #586069;
+  padding: 2rem 0;
+  text-align: center;
+  border-top: 1px solid #e1e4e8;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.footer p:first-child {
+  color: #24292f;
+  font-weight: 500;
+}
+
+/* Dark theme styles */
+[data-theme="dark"] .footer {
+  background-color: #161b22;
+  border-top-color: #30363d;
+}
+
+[data-theme="dark"] .footer p {
+  color: #8b949e;
+}
+
+[data-theme="dark"] .footer p:first-child {
+  color: #c9d1d9;
+}

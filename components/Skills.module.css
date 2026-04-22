@@ -1,0 +1,129 @@
+.skills {
+  padding: 5rem 0;
+  background-color: #f6f8fa;
+  position: relative;
+}
+
+.skills::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.02) 0%, rgba(40, 167, 69, 0.02) 100%);
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #24292f;
+  font-weight: 600;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 2px solid #e1e4e8;
+  text-align: center;
+  font-weight: 600;
+  color: #24292f;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+  position: relative;
+  overflow: hidden;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skill::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #007bff, #28a745);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.skill:hover {
+  transform: translateY(-4px) rotateX(2deg);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-color: #007bff;
+  min-height: 160px;
+}
+
+.skill:hover::before {
+  transform: scaleX(1);
+}
+
+.skillName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #24292f;
+  margin-bottom: 0.5rem;
+}
+
+.skillDescription {
+  font-size: 0.9rem;
+  color: #586069;
+  line-height: 1.4;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  font-weight: 400;
+}
+
+.skill:hover .skillDescription {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dark theme styles */
+[data-theme="dark"] .skills {
+  background-color: #161b22;
+}
+
+[data-theme="dark"] .title {
+  color: #c9d1d9;
+}
+
+[data-theme="dark"] .skill {
+  background: #0d1117;
+  border-color: #30363d;
+  color: #c9d1d9;
+}
+
+[data-theme="dark"] .skill:hover {
+  border-color: #58a6ff;
+}
+
+[data-theme="dark"] .skillName {
+  color: #c9d1d9;
+}
+
+[data-theme="dark"] .skillDescription {
+  color: #8b949e;
+}

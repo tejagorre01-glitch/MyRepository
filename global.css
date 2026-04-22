@@ -1,7 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',
-    'Arial', sans-serif;
-  margin: 0 auto;
+  font-family: 'Bookman Old Style', 'Times New Roman', serif;
+  margin: 0;
+  padding: 0;
   font-size: 16px;
   line-height: 1.65;
   word-break: break-word;
@@ -11,4 +19,68 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   hyphens: auto;
+  color: #24292f;
+  background-color: #ffffff;
+  perspective: 1000px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark theme */
+[data-theme="dark"] body {
+  color: #c9d1d9;
+  background-color: #0d1117;
+}
+
+/* Clean GitHub-like scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f6f8fa;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d9e0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c7ccd1;
+}
+
+/* Dark theme scrollbar */
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: #161b22;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #30363d;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}
+
+/* Subtle 3D hover effects */
+* {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button, a, .card {
+  cursor: pointer;
+}
+
+button:hover, a:hover {
+  transform: translateZ(2px);
+}
+
+/* Floating animation for subtle depth */
+@keyframes subtleFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-2px); }
+}
+
+.subtle-float {
+  animation: subtleFloat 4s ease-in-out infinite;
 }

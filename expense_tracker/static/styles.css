@@ -1,0 +1,71 @@
+body {
+    font-family: Arial;
+    background: lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main box */
+.box {
+    background: white;
+    padding: 30px;
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px darkgreen;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Box hover (optional but nice) */
+.box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px darkgreen;
+}
+
+/* Inputs & Buttons */
+input,
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 10px;
+    border: 2px solid lightgreen;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Input focus effect */
+input:focus {
+    outline: none;
+    border-color: darkgreen;
+    box-shadow: 0 0 5px darkgreen;
+}
+
+/* Button style */
+button {
+    background-color: darkgreen;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* 🔥 Button hover */
+button:hover {
+    background-color: green;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 100, 0, 0.5);
+}
+
+/* Link */
+a {
+    text-decoration: none;
+    color: blue;
+    transition: color 0.3s ease;
+}
+
+/* Link hover */
+a:hover {
+    color: darkgreen;
+    text-decoration: underline;
+}

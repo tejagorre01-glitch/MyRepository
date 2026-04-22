@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Expense</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+	<link rel="stylesheet" type="text/css" href="/static/style.css" />
+</head>
+<body>
+<div class="container mt-4">
+    <h2>Edit Expense</h2>
+
+    <form method="POST">
+        <div class="mb-2">
+            <input type="text" name="name" value="{{ expense[1] }}" class="form-control" required>
+        </div>
+
+        <div class="mb-2">
+            <input type="number" name="amount" value="{{ expense[2] }}" class="form-control" required>
+        </div>
+
+        <div class="mb-2">
+            <input type="date" name="date" value="{{ expense[5] }}" class="form-control" required>
+        </div>
+
+        <button class="btn btn-primary">Update</button>
+        <a href="/" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+<script>
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/static/service-worker.js")
+    .then(() => console.log("Service Worker Registered"))
+    .catch(err => console.error("SW failed", err));
+}
+</script>
+
+</body>
+</html>
